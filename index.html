@@ -55,19 +55,15 @@
       align-items: center;
     }
 
-    .avatar-box {
+    /* 大頭照圓形化設定 */
+    .avatar-img {
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      background: #334155;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 36px;
-      color: var(--accent-color);
+      object-fit: cover; /* 確保照片不拉高壓扁 */
       border: 3px solid var(--accent-color);
       margin-bottom: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     }
 
     .name-box {
@@ -231,9 +227,11 @@
 <body>
 
   <div class="resume-card">
-    <!-- 左欄：基本資料與聯絡方式 -->
+    <!-- 左欄：照片、基本資料與標籤 -->
     <div class="sidebar">
-      <div class="avatar-box">李</div>
+      <!-- 引用上傳的圖片 -->
+      <img src="S__37912606.jpg" alt="李孟謙" class="avatar-img" />
+
       <div class="name-box">
         <h1>李孟謙</h1>
         <h2>Meng-Chien Lee</h2>
@@ -254,7 +252,7 @@
           <span class="tag">C# / .NET</span>
           <span class="tag">WinForms</span>
           <span class="tag">工業控制</span>
-          <span class="tag">EMS系統</span>
+          <span class="tag">EMS 系統</span>
           <span class="tag">PLC 通訊</span>
           <span class="tag">自動化</span>
         </div>
